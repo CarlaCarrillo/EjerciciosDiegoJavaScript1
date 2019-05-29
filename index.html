@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./respuestas.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <h3>1) Perímetro de un triángulo rectángulo</h3>
+
+        <input type="number" id="lado1" placeholder="lado1">
+        <input type="number" id="lado2" placeholder="lado2">
+        <input type="number" id="lado3" placeholder="lado3">
+        <button onclick="calculaPerim()">Calcular área</button>
+        <br><br>
+        <label>Perímetro: </label>
+        <div id="perimResultado">
+        </div>
+        <br>
+        <textarea id="textperim" class="form-control"></textarea>
+
+    
+
+        <h3>2) Voltea un string dada por el usuario sin función reverse</h3>
+        
+        <input type="text" id="palabrainv" placeholder="Ingresa palabra">
+        <button onclick="manejainvertir()">Invierte palabra</button><p/>
+        <textarea id="resultadoinvertir" class="form-control"></textarea>
+        <!--<div id="resultadoinvertir">
+        </div>-->
+
+    
+        <h3> 4) Convierte una temperatura dada en C o F a F o C, respectivamente</h3>
+
+        <input type="number" id="c" placeholder="°C">
+        <button onclick="calculaF()">Convierte a °F</button><p/>
+        <textarea id="valueF" class="form-control"></textarea><p/>
+
+        <input type="number" id="f" placeholder="°F">
+        <button onclick="calculaC()">Convierte a °C</button><p/>
+        <textarea id="valueC" class="form-control"></textarea>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,9 +1,9 @@
-//Imprime la fecha actual
+//(1)Imprime la fecha actual
 var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
 var f=new Date();
 document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
 
-// Obten el área de un triángulo. Pidele los 3 lados al 
+// (2)Obten el área de un triángulo. Pidele los 3 lados al 
 
 function calculaPerim(){
 var textResultado = document.getElementById("textperim");
@@ -17,7 +17,7 @@ textResultado.value = perim;
 
 }
 
-// Voltea una string dada por el usuario
+//(3) Voltea una string dada por el usuario 
 function invertir_text(texto) { 
     return texto.split('').reverse().join('')
 }
@@ -30,17 +30,8 @@ function reverse() {
 
 }
 
-function reverse() {
 
-    var invertir = String(window.prompt('ingresa palabra'));
-    var rvs = invertir.split("");
-    alert(rvs.reverse(invertir).join(""));
-
-}
-
-
-
-// Voltea una string dada por el usuario sin usar el método de reverse
+// (4)Voltea una string dada por el usuario sin usar el método de reverse
 function manejainvertir() {
     var cadena = document.getElementById('palabrainv').value;
     var resultado = invertir(cadena); //resultado será el de la función invertir
@@ -64,8 +55,9 @@ function invertir(cadena) {
 
 
 
-//Convierte una temperatura dada en C o F a F o C, respectivamente
-function convert(degree) {
+//(5)Convierte una temperatura dada en C o F a F o C, respectivamente
+//esta función es jalada desde el html
+function convertir(degree) {
     var x;
     if (degree == "C") {
       x = document.getElementById("c").value * 9 / 5 + 32;
@@ -75,10 +67,7 @@ function convert(degree) {
       document.getElementById("c").value = Math.round(x);
     }
   }
-
-
-
-
+  //otras funciones de conversión pero no las use
   function cToF(celsius) 
 {
   const cTemp = celsius;

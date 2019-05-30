@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-        <h3>1) Perímetro de un triángulo rectángulo</h3>
+        <h3>2) Perímetro de un triángulo rectángulo</h3>
 
         <input type="number" id="lado1" placeholder="lado1">
         <input type="number" id="lado2" placeholder="lado2">
@@ -21,9 +21,8 @@
         <br>
         <textarea id="textperim" class="form-control"></textarea>
 
-    
 
-        <h3>2) Voltea un string dada por el usuario sin función reverse</h3>
+        <h3>4) Voltea un string dada por el usuario sin función reverse</h3>
         
         <input type="text" id="palabrainv" placeholder="Ingresa palabra">
         <button onclick="manejainvertir()">Invierte palabra</button><p/>
@@ -32,18 +31,12 @@
         </div>-->
 
     
-        <h3> 4) Convierte una temperatura dada en C o F a F o C, respectivamente</h3>
-
-        <input type="number" id="c" placeholder="°C">
-        <button onclick="calculaF()">Convierte a °F</button><p/>
-        <textarea id="valueF" class="form-control"></textarea><p/>
-
-        <input type="number" id="f" placeholder="°F">
-        <button onclick="calculaC()">Convierte a °C</button><p/>
-        <textarea id="valueC" class="form-control"></textarea>
+        <h3> 5) Convierte una temperatura dada en C o F a F o C, respectivamente</h3>
 
 
+        <p><input id="c" onkeyup="convertir('C')" placeholder="°C"> degrees Celsius</p>
 
+        <p><input id="f" onkeyup="convertir('F')" placeholder="°F"> degrees Fahrenheit</p> 
 
 
 

@@ -12,7 +12,7 @@ const invertirCadena = cadena => {
 }
 
 
-// Convierte una temperatura dada en C o F a F o C, respectivamente
+//[x] Convierte una temperatura dada en C o F a F o C, respectivamente
 /*
   C -> F: (C x 9/5) + 32
   F -> C: (F - 32) x 5/9
@@ -20,20 +20,20 @@ const invertirCadena = cadena => {
   60C: 140F
   45C: 7.222222222222222C
 */
-// Crea un objeto que tenga una propiedad cuyo nombre es definido por el usuario. Su valor debe ser verdadero
+// [x]Crea un objeto que tenga una propiedad cuyo nombre es definido por el usuario. Su valor debe ser verdadero
 /*
   si prop es el nombre,
   a  = {};
   a.prop = true
 */
-// Realiza la suma de los valores que de el usuario hasta recibir un valor negativo
-// Convierte a mayúscula la primer letra de cada palabra en una cadena dada por el usuario
-// Revisa si un número dado es múltiplo de 3 o de 7
-// Revisa cuantas veces se repite un caracter dado en una cadena dada
-// Revisa cuantas veces se repite un valor dado en un arreglo
-// Divide un número de 3 dígitos en sus centenas, decenas y unidades
+// [x] Realiza la suma de los valores que de el usuario hasta recibir un valor negativo
+// [x] Convierte a mayúscula la primer letra de cada palabra en una cadena dada por el usuario
+// [x] Revisa si un número dado es múltiplo de 3 o de 7
+// [x]Revisa cuantas veces se repite un caracter dado en una cadena dada
+// [x]Revisa cuantas veces se repite un valor dado en un arreglo
+// [ ]Divide un número de 3 dígitos en sus centenas, decenas y unidades
   // 103 -> 1 centena, 0 decenas, 3 unidades
-// Regresa todos los caracteres que no sean letras de una cadena
+// [ ]Regresa todos los caracteres que no sean letras de una cadena
 // Haz una función que lanza un error con el mensaje dado por el usuario
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
 // Suma los contenidos de un arreglo de números

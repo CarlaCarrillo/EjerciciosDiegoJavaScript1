@@ -188,7 +188,14 @@ alert ("Estas carácteres" + strinNogletra.join("") + "no son letras");
 
 // Haz una función que lanza un error con el mensaje dado por el usuario
 
-  var err = new Error();
+function error() {
+  let mensajePersonal = window.prompt('Error personalizado');
+  throw new Error(mensajePersonal)
+}
+
+
+      //ejemplos en funciones
+var err = new Error();
   err.name = String(window.prompt('Ingresa mensaje de error'));
   
   function checkNumber( my_string ){
@@ -199,26 +206,71 @@ alert ("Estas carácteres" + strinNogletra.join("") + "no son letras");
     console.log( my_string + ' is a number!' );
     return true;
   }
+     //otro ejemplo con throw
+  var numero = Number(window.prompt('Ingresa número'));  
+  var resto3 = numero % 3;  
+  var resto7 = numero % 7;
   
+    if ( resto3 == 0 ){
+      alert("es multiplo de 3");
+    } else if ( resto3 !== 0)  { 
+          if ( resto7 == 0){
+        alert("es multiplo de 7")
+        } else if (resto7 !== 0){
+          throw console.error( 'Error: Número no múltiplo de 3 o 7!' )//Aquí se agrega el mensaje de error
+        }
+      } 
 
 // Extiende la función anterior para atrapar el error e imprimir su mensaje y stack
 
-var numero = Number(window.prompt('Ingresa número'));  
-var resto3 = numero % 3;  
-var resto7 = numero % 7;
+//ejemplo:
+try {
+  throw new Error("Whoops!");
+} catch (e) {
+  alert(e.name + ": " + e.message);
+}
 
-  if ( resto3 == 0 ){
-    alert("es multiplo de 3");
-  } else if ( resto3 !== 0)  { 
-        if ( resto7 == 0){
-      alert("es multiplo de 7")
-      } else if (resto7 !== 0){
-        throw console.error( 'Error: Número no múltiplo de 3 o 7!' )//Aquí se agrega el mensaje de error
-      }
-    } 
+
+//Respuesta
+
+function error() {
+  let mensajePersonal = window.prompt('Error personalizado');
+  throw new Error(mensajePersonal)
+}
+
+function errorImpreso() {
+  try {
+    error()//jala mi función de error del ejercicio anterior
+  } catch (err) {
+  alert(err.stack);
+  }
+}
+errorImpreso();
+
 
 // Suma los contenidos de un arreglo de números
+var numero =[];
+var suma = 0;
+			
+	for (var i = 0; i < 4; i++){
+		numero[i] = Number(prompt("Ingrese número"));				
+		suma = suma + numero[i]; 
+	}
+			
+alert('suma = '  + suma);
+
 // Regresa un arreglo nuevo con el cuadrado de cada valor del arreglo original
+
+function arregloCuadrado(){
+  let arreglo = window.prompt('Ingresa arreglo');
+  var cuadrado = [] 
+  for (let i = 0; i < arreglo.length; i++) {
+    if (/\d/.test(arreglo[i])) {
+      cuadrado.push(Math.pow(parseFloat(arreglo[i]),2))
+    }
+    alert(arregloCuadrado)
+}
+
 // Regresa que tipo de ángulo es el dado
 /*
   Agudo: 0 a 90 grados
@@ -226,11 +278,88 @@ var resto7 = numero % 7;
   Obtuso: 90 a 180 grados
   Llano: 180 grados
 */
+var tipoAngulo = Number(window.prompt('ingresa valor del ángulo en grados '));
+
+if(tipoAngulo >=0 && tipoAngulo <89) {
+  alert('AGUDO')
+} else if (tipoAngulo === 90) {
+  alert ('RECTO')
+} else if (tipoAngulo === 170 && tipoAngulo >90) {
+  alert('OBTUSO')
+} else if (tipoAngulo === 180){
+  alert('LLANO')
+} else {
+  alert('El valor debe ser de 0 a 180°')
+}
+
 // Regresa un arreglo nuevo sin los valores repetidos de un arreglo original
+
+function arrSinRep(arreglo) {
+   for(var i in arreglo){
+     for (var j in arreglo) {
+       if(arreglo[i] === arreglo[j] && i !=  j) {
+         j++;
+         arreglo.splice(i,1);
+       }  
+     }
+   }
+return arreglo
+}
+alert(arrSinRep);
+
+
 // Quita los valores repetidos de un arreglo (sin usar otro arreglo)
+function valRep(){
+  var arr = [];
+  while (arr.length != 5) {
+    let val = parseInt(window.prompt('Valor'));
+    arr.push(val)
+  }
+  let valSinRep = [...new Set(arr)];
+}
+alert(valRep);
+
 // Convierte un número binario dado por el usuario a decimal
+
+function binarioAdecimal(){
+  let num = window.prompt('ingresa valor binario');
+  var raiz = 0;
+  var residuo = 0;
+  for (i = num.length -1; i > -1; i--) {
+    var operacion = num[i] * Math.pow(2,raiz)
+    raiz ++
+    residuo += operacions;
+  }
+  alert(binarioAdecimal;)
+}
+
 // Convierte un número decimal dado por el usuario a binario, octal y hexadecimal (bases 2, 8 y 16)
+
+
 // Regresa la cantidad de valores que comparten dos arreglos diferentes
+//un ejemplo
+const array1 = [
+  {id: 4, name: 'Gato'},
+  {id: 1, name: 'Perro'},
+  {id: 2, name: 'Zorro'},
+  {id: 3, name: 'Leon'},
+];
+
+const array2 = [
+  {id: 5, name: 'Leon', position: '1'},
+  {id: 6, name: 'Blanco', position: '2'},
+  {id: 2, name: 'Amarillo', position: '2'},
+  {id: 3, name: 'Zorro', position: '2'},
+];
+
+const r = array1.filter(({ id: idv }) => array2.every(({ id: idc }) => idv !== idc));
+const newArr = array2.concat(r).map((v) => v.position ? v : { ...v, position: null });
+
+console.log(newArr);
+
+//respuesta
+
+
 // Valida que una cadena dada no tenga espacios en blanco
 // Dada una cadena, determina su valor de scrabble
 /*

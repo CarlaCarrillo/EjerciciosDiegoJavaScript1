@@ -330,14 +330,18 @@ function binarioAdecimal(){
     raiz ++
     residuo += operacions;
   }
-  alert(binarioAdecimal;)
+  alert(binarioAdecimal);
 }
+// otra opción con alerta en pantalla
+var num = Number(window.prompt('ingresa numero'));
+alert( num.toString(2) );
 
 // Convierte un número decimal dado por el usuario a binario, octal y hexadecimal (bases 2, 8 y 16)
-
+var num = Number(window.prompt('ingresa numero'));
+alert('El número introducido: ' + 'es en ' + num.toString(2) + 'en octal es ' + num.toString(8) + 'y en hexadecimal es ' + num.toString(16));
 
 // Regresa la cantidad de valores que comparten dos arreglos diferentes
-//un ejemplo
+
 const array1 = [
   {id: 4, name: 'Gato'},
   {id: 1, name: 'Perro'},
@@ -357,10 +361,14 @@ const newArr = array2.concat(r).map((v) => v.position ? v : { ...v, position: nu
 
 console.log(newArr);
 
-//respuesta
-
-
 // Valida que una cadena dada no tenga espacios en blanco
+
+var cadena = String(window.prompt('Ingresa cadena'));
+var regez = /[A-Za-z\s]/g
+if (regez.test(cadena) === true) {
+  alert('no tiene espacios en blanco')
+}
+
 // Dada una cadena, determina su valor de scrabble
 /*
   1: E, A, I, O, N, R, T, L, S, U

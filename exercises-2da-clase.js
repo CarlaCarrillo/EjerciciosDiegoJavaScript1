@@ -205,16 +205,27 @@ class Product {
     this.nombre = nombre
     this.valor = valor
   }
+  get value(){
+    return this.valor * 1.16
+  } 
 }
-
-
-
 
  /* Crea otra clase Cart que recibe un arreglo de Product
   tiene un método (add) que recibe un Product y lo agrega a su lista
   tiene un método (total) que regresa el total de todos los Product(con iva)
 */
-
+class Cart {
+  constructor(nombre,valor) {
+    this.nombre = nombre
+    this.valor = valor
+  }
+  get add(){
+    
+  }
+  get total(){
+    
+  }
+}
 
 
 

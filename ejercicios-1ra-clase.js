@@ -383,3 +383,21 @@ if (regez.test(cadena) === true) {
 // Implementa una lista ligada
 // Implementa una lista doblemente ligada
 // Obten el Máximo común divisor de dos números dados
+
+var Num1 = Number(window.prompt('primer número'));
+var Num2 = Number(window.prompt('segundo número'));
+
+Math.mcd = function () {
+  if (arguments.length == 2) {
+      if (arguments[1] == 0)
+          return arguments[0];
+      else
+          return Math.mcd(arguments[1], arguments[0] % arguments[1]);
+  } else if (arguments.length > 2) {
+      var result = Math.mcd(arguments[0], arguments[1]);
+      for (var i = 2; i < arguments.length; i++)
+          result = Math.mcd(result, arguments[i]);
+      return result;
+  }
+};
+alert('MCD de ' + Num1 + ' y ' + Num2 + ' es: ' + Math.gcd(Num1, Num2));

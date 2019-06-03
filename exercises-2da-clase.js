@@ -227,13 +227,8 @@ class Cart {
   }
 }
 
-
-
-
-
-
-
  /* Crea otra clase Food que hereda de product
   su método value regresa el valor sin iva
   Esta clase debería poder usarse en Cart
 */
+

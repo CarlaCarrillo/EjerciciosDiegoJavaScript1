@@ -98,21 +98,28 @@ var sumaArreglo = array.map(function(elemento) {
 
 //Crea una función que llama a un callback y usa el valor que regresa para llamar a otro. Después debe llamar a un tercer callback con el valor que regresa el segundo
 
-function saludar(callback) {
-	let menssage = 'Hola  a todos'
-	callback(menssage)
+function first(callback) {
+    callback('first')
 }
 
-saludar(function(str) {
-	console.log('Se está llamando al callback')
-	console.log(str)
-})
+function second(value,callback) {
+callback(`second, ${value}`);
+}
 
-saludar(function(str) {
-	str = 'Hola a todos de nuevo(se cambia el parametro)'
-	console.log('Se esta llamando a otro callback')
-	console.log(str)
-})
+function third() {
+callback(`third, (${secondValue}), ${firstValue}`);
+}
+
+first( firstValue => {
+    second(firstValue, secondValue => {
+        third(firstValue,secondValue,thirdValue => {
+            console.log(thirdValue);
+        });
+    });
+});
+
+third,(second, first), first
+
 
 
   //otra forma

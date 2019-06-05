@@ -23,10 +23,47 @@
     imageParent.appendChild(image);
     })
 */
-    async function obtenerPerrito () {
+ /*   async function obtenerPerrito () {
         let respuesta = await fetch("https://random.dog/woof.json") 
-    console.log(respuesta);   
+    console.log(respuesta);  
+
     let datos = await respuesta.json();
+    console.log(datos);
+    var image = document.createElement("img");
+    var imageParent = document.getElementById("body");
+    image.id = "id";
+    image.src = datos.url;            // image.src = "IMAGE URL/PATH"
+    imageParent.appendChild(image);  
+}
+obtenerPerrito();
+*/
+
+async function obtenerPerrito () {
+        let respuesta = await fetch("https://random.dog/woof.json") 
+    console.log(respuesta);  
+     
+respuesta.json().then((data) => {
+
+if (data.url.split(".")[2]=="jpg") {
+    console.log("foto")
+    var image = document.createElement("img");
+    var imageParent = document.getElementById("contenedordeperritos");
+    image.id = "id";
+    image.src = data.url;
+    //imge.src = "IMAGE URL/PATH"
+    imageParent.appendChild(image);
+} else {
+    console.log("video")
+    var label = document.createElement("label");
+    var imageParent = document.getElementById("contenedordeperritos");
+    label.id = "id";
+    label.innerHTML = "No puedo poner videos de perritos :("
+    imageParent.appendChild(label);
+        }
+    });
+}
+    obtenerPerrito();
+   
     console.log(datos);
     var image = document.createElement("img");
     var imageParent = document.getElementById("body");

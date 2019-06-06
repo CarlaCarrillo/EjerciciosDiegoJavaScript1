@@ -57,11 +57,11 @@ noSpan.innerHTML='Not a span'
 noSpan.className ='not-a-span'
 document.querySelector('#div11').appendChild(noSpan);
 
-
 // Cambia el src de la imagen de div12 a dogge.jpg (adjunto)
-document.querySelector("div12").setAttribute("src", "dogge.jpg");
+document.querySelector("div12").getAttribute('img').setAttribute("src", "dogge.jpg");//SetAtribute me permite establecer atributos
 
 // Pon 'THE-span' como id del span de div13
+document.querySelector("div13").getAttribute('ispan').setAttribute("id", "THE-span");//SetAtribute me permite establecer atributos
 /**
    * Agrega listeners a los 3 inputs de div14.
    * change para changeInput
